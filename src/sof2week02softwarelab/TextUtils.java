@@ -19,7 +19,7 @@ public class TextUtils {
         System.out.println(Arrays.toString(res3));
 
         // Ex 4
-        int[] data = {1, 2, 3, 4, 5, 6};
+        int[] data = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         int[][] matrix = rasterise(data, 3);
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
@@ -125,7 +125,7 @@ public class TextUtils {
         // rasterise({1,2,3,4,5,6,7,8},3)→ null
 
     public static int[][] rasterise(int[] data, int width) {
-        if (data.length % width != 0) {
+        if (width <= 0 || data.length % width != 0) {
             return null;
         }
 
